@@ -1,5 +1,10 @@
+:root {
+  --carousell-height: 300px;
+  --carousell-width: 270px;
+}
+
 body {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   font-family: "Trip Sans Reg", serif;
 }
 
@@ -30,7 +35,7 @@ header {
   margin-top: 10px;
 }
 header div {
-  height: 40px;
+  height: 42px;
   display: flex;
   justify-content: space-between;
 }
@@ -38,10 +43,12 @@ header div {
 .left-header {
   display: flex;
 }
-
+.left-header img {
+  width: 150px;
+}
 .form-input {
   width: 300px;
-  border: rgba(201, 201, 201, 0.884) solid 2px;
+  border: rgba(209, 209, 209, 0.884) solid 2px;
   border-radius: 20px;
   margin-left: 30px;
   display: flex;
@@ -55,8 +62,9 @@ header div {
 
 .right-header {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .right-header div {
@@ -65,7 +73,7 @@ header div {
 }
 
 .right-header svg {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .right-header div:nth-child(1) {
@@ -101,16 +109,21 @@ header div {
   padding-left: 10px;
 }
 
-.connect-button {
+button {
   color: white;
-  /* margin-left: 30px; */
-  background-color: black;
-  border-radius: 25px;
+  background: black;
   padding-left: 15px;
   padding-right: 15px;
+  /* padding-top: 15px; */
+  /* padding-bottom: 15px; */
+  border-radius: 25px;
+  border: none;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
 }
 
-.connect-button:hover {
+button:hover {
   background-color: #333333;
 }
 
@@ -156,7 +169,6 @@ h3 {
   height: 66px;
   border: black solid 1px;
   border-radius: 10px;
-  /* background-color: blue; */
 }
 
 .menu-bar div:hover {
@@ -183,16 +195,16 @@ h3 {
 .photos img:hover {
   opacity: 80%;
 }
-.photos div:nth-child(1) {
+.photos .left {
   flex: 7;
 }
-.photos div:nth-child(1) img {
+.photos .left img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.photos div:nth-child(2) {
+.photos .right {
   flex: 5;
   display: flex;
   flex-direction: column;
@@ -200,7 +212,7 @@ h3 {
   overflow: hidden;
 }
 
-.photos div:nth-child(2) img {
+.photos .right img {
   object-fit: cover;
   float: right;
   width: 100%;
@@ -235,17 +247,18 @@ h3 {
 .details-city {
   display: flex;
   gap: 100px;
+  margin-bottom: 60px;
 }
 .left-column {
   flex: 4;
 }
 
 .left-column p {
-  font-size: 20px;
+  font-size: 18px;
   font-family: Georgia;
   font-weight: 100;
   font-style: normal;
-  line-height: 24px;
+  line-height: 22px;
 }
 
 .right-column {
@@ -288,4 +301,107 @@ h3 {
 .button {
   display: flex;
   margin-top: 20px;
+}
+
+h4 {
+  font-family: "Trip Sans Reg";
+  font-weight: bold;
+  line-height: 29px;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.caroussel-base {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.caroussel-base > section {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.left-text {
+  flex: 2;
+}
+.left-text p {
+  font-size: 18px;
+  font-family: Georgia;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.right-caroussel::-webkit-scrollbar {
+  display: none;
+}
+
+.right-caroussel {
+  flex: 8;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  gap: 15px;
+}
+
+.img-container {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+}
+
+.img-container img:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.img-container img:nth-child(1):hover {
+  opacity: 80%;
+}
+
+.img-container img:nth-child(2) {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 8px;
+  bottom: 8px;
+}
+
+.img-container i {
+  background: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.right-caroussel p {
+  margin-top: 10px;
+  font-size: 17px;
+  height: 40px;
+}
+
+footer {
+  height: 150px;
+  background: #f9f1ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h5 {
+  margin-left: 20px;
+  font-size: 20px;
+  font-family: "Trip Sans Med";
+}
+
+h5 span {
+  color: #fe5d5d;
+  font-weight: bold;
 }
