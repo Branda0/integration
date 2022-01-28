@@ -21,17 +21,20 @@ p {
   font-size: 16px;
 }
 
+h1,
+h2 {
+  font-weight: 700;
+}
+
 h1 {
   font-size: 50px;
   line-height: 59px;
-  font-weight: 700;
   color: #393c6c;
   text-align: center;
 }
 
 h2 {
   font-size: 30px;
-  font-weight: 700;
   color: #f3735f;
   margin-bottom: 20px;
   margin-top: 70px;
@@ -44,11 +47,11 @@ h3 {
   line-height: 22px;
 }
 
-p.baseline {
-  line-height: 14px;
+.baseline {
+  /* line-height: 14px; */
   font-size: 12px;
   font-weight: 400;
-  font-style: normal;
+  /* font-style: normal; */
   text-align: center;
   color: #6c6c6c;
 }
