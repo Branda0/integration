@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://kit.fontawesome.com/c85f9bfed6.js"></script>
+    <!-- Import script contact form -->
+    <script src="./assets/js/contact.js"></script>
+
+    <!-- Import d'axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- Import du CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -20,7 +24,26 @@
 
 
 
+
 <body>
+
+
+    <!-- CONTACT FORM -->
+    <div id="form" class="form-background">
+        <div class="form-container">
+            <h2>Formulaire de contact</h2>
+            <i id="icon-close" class="icon-close"></i>
+            <form class=contact-form id=contact-form>
+                <input type="text" placeholder="Prénom" id="first-name">
+                <input type="text" placeholder="Nom" id="last-name">
+                <input type="email" placeholder="Email" id="email">
+                <textarea placeholder="Écrivez ici votre message" id="message" rows="8"></textarea>
+                <input type="submit" value="Envoyer" id="submit-btn">
+            </form>
+        </div>
+    </div>
+
+
     <header>
         <div class=container>
             <nav class=left-header>
@@ -48,14 +71,18 @@
                     <p>Alertes</p>
                 </div>
                 <div>
-                    <p>Connectez</p>
+                    <button id="contact-btn">Contactez-nous</button>
                 </div>
             </nav>
 
         </div>
     </header>
+
+
+
     <main>
         <div class=container>
+
             <h1> <span style="color:#FE5D5D"> Explorez</span> Tokyo</h1>
 
             <nav class=menu-bar>

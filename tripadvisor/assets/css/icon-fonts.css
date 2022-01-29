@@ -121,5 +121,5 @@ i {
 }
 .icon-close:before {
   content: "\e921";
-  color: #fff;
+  color: rgb(34, 34, 34);
 }
